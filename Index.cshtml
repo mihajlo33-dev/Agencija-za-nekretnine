@@ -1,47 +1,32 @@
-﻿@model IEnumerable<WebApplication111.Models.stan>
-
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/Content/css")
-@Scripts.Render("~/bundles/modernizr")
-
+﻿@model IEnumerable<WebApplication111.Models.kuca>
 
 @{
-
-
-    ViewBag.Title = "STANOVI";
+    ViewBag.Title = "KUCE";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>STANOVI</h2>
+<h2>KUCE</h2>
 
 <p>
-    @Html.ActionLink("Dodaj novi stan", "Create")
+    @Html.ActionLink("Dodaj novu kucu", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.broj_stana)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.vlasnik_stana)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.kupatilo)
+            @Html.DisplayNameFor(model => model.zemljiste)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.kvadratura)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.broj_soba)
+            @Html.DisplayNameFor(model => model.bazen)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.balkon)
+            @Html.DisplayNameFor(model => model.adresa)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.agencija.ime_agencije)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.zgrada.adresa)
         </th>
         <th></th>
     </tr>
@@ -50,33 +35,24 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.broj_stana)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.vlasnik_stana)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.kupatilo)
+                @Html.DisplayFor(modelItem => item.zemljiste)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.kvadratura)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.broj_soba)
+                @Html.DisplayFor(modelItem => item.bazen)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.balkon)
+                @Html.DisplayFor(modelItem => item.adresa)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.agencija.ime_agencije)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.zgrada.adresa)
-            </td>
-            <td>
-                @Html.ActionLink("Uredi", "Edit", new { id = item.ID_stan }) |
-                @Html.ActionLink("Detalji", "Details", new { id = item.ID_stan }) |
-                @Html.ActionLink("Obrisi", "Delete", new { id = item.ID_stan })
+                @Html.ActionLink("Uredi", "Edit", new { id = item.ID_kuca }) |
+                @Html.ActionLink("Detalji", "Details", new { id = item.ID_kuca }) |
+                @Html.ActionLink("Obrisi", "Delete", new { id = item.ID_kuca })
             </td>
         </tr>
     }
@@ -88,23 +64,18 @@
 
 
 
-            $('document').ready(function () {
+    $('document').ready(function () {
 
 
-                $('tr:even').css('background-color', '#d5e1df');
+        $('tr:even').css('background-color', '#d5e1df');
 
-            });
+
+    });
 </script>
 
-
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
 
 <style>
 
 
     @@import url('../../Content/Site.css');
 </style>
-
-
-
