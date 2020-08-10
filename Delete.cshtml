@@ -1,39 +1,47 @@
-﻿@model WebApplication111.Models.kuca
+﻿@model WebApplication111.Models.agencija
 
 @{
     ViewBag.Title = "Delete";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>OBRISI</h2>
+<h2>Delete</h2>
 
 <h3>Da li zelite da ovo izbrisete?</h3>
 <div>
-    <h4>Kuca</h4>
+    <h4>Agencija</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.zemljiste)
+            @Html.DisplayNameFor(model => model.ime_agencije)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.zemljiste)
+            @Html.DisplayFor(model => model.ime_agencije)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.kvadratura)
+            @Html.DisplayNameFor(model => model.kontakt_telefon)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.kvadratura)
+            @Html.DisplayFor(model => model.kontakt_telefon)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.bazen)
+            @Html.DisplayNameFor(model => model.e_mail)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.bazen)
+            @Html.DisplayFor(model => model.e_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.web_sajt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.web_sajt)
         </dd>
 
         <dt>
@@ -42,14 +50,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.adresa)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.agencija.ime_agencije)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.agencija.ime_agencije)
         </dd>
 
     </dl>

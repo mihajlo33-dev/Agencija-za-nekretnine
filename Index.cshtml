@@ -1,32 +1,31 @@
-﻿@model IEnumerable<WebApplication111.Models.kuca>
+﻿@model IEnumerable<WebApplication111.Models.agencija>
 
 @{
-    ViewBag.Title = "KUCE";
+    ViewBag.Title = "AGENCIJE";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>KUCE</h2>
+<h2>AGENCIJE</h2>
 
 <p>
-    @Html.ActionLink("Dodaj novu kucu", "Create")
-</p>
-
+    @Html.ActionLink("Dodaj novu agenciju", "Create")
+</p> 
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.zemljiste)
+            @Html.DisplayNameFor(model => model.ime_agencije)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.kvadratura)
+            @Html.DisplayNameFor(model => model.kontakt_telefon)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.bazen)
+            @Html.DisplayNameFor(model => model.e_mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.web_sajt)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.adresa)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.agencija.ime_agencije)
         </th>
         <th></th>
     </tr>
@@ -35,29 +34,32 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.zemljiste)
+                @Html.DisplayFor(modelItem => item.ime_agencije)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.kvadratura)
+                @Html.DisplayFor(modelItem => item.kontakt_telefon)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.bazen)
+                @Html.DisplayFor(modelItem => item.e_mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.web_sajt)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.adresa)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.agencija.ime_agencije)
-            </td>
-            <td>
-                @Html.ActionLink("Uredi", "Edit", new { id = item.ID_kuca }) |
-                @Html.ActionLink("Detalji", "Details", new { id = item.ID_kuca }) |
-                @Html.ActionLink("Obrisi", "Delete", new { id = item.ID_kuca })
+                @Html.ActionLink("Uredi", "Edit", new { id = item.ID_agencija }) |
+                @Html.ActionLink("Detalji", "Details", new { id = item.ID_agencija }) |
+                @Html.ActionLink("Obrisi", "Delete", new { id = item.ID_agencija })
             </td>
         </tr>
     }
 
 </table>
+
+
+
 
 <script type="text/javascript">
 
@@ -68,7 +70,6 @@
 
 
         $('tr:even').css('background-color', '#d5e1df');
-
 
     });
 </script>
