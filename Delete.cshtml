@@ -1,4 +1,4 @@
-﻿@model WebApplication111.Models.agencija
+﻿@model WebApplication111.Models.stan
 
 @{
     ViewBag.Title = "Delete";
@@ -9,47 +9,71 @@
 
 <h3>Da li zelite da ovo izbrisete?</h3>
 <div>
-    <h4>Agencija</h4>
+    <h4>Stan</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ime_agencije)
+            @Html.DisplayNameFor(model => model.broj_stana)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ime_agencije)
+            @Html.DisplayFor(model => model.broj_stana)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.kontakt_telefon)
+            @Html.DisplayNameFor(model => model.vlasnik_stana)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.kontakt_telefon)
+            @Html.DisplayFor(model => model.vlasnik_stana)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.e_mail)
+            @Html.DisplayNameFor(model => model.kupatilo)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.e_mail)
+            @Html.DisplayFor(model => model.kupatilo)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.web_sajt)
+            @Html.DisplayNameFor(model => model.kvadratura)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.web_sajt)
+            @Html.DisplayFor(model => model.kvadratura)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.adresa)
+            @Html.DisplayNameFor(model => model.broj_soba)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.adresa)
+            @Html.DisplayFor(model => model.broj_soba)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.balkon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.balkon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.agencija.ime_agencije)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agencija.ime_agencije)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zgrada.adresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zgrada.adresa)
         </dd>
 
     </dl>

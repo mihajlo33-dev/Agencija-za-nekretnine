@@ -1,31 +1,47 @@
-﻿@model IEnumerable<WebApplication111.Models.agencija>
+﻿@model IEnumerable<WebApplication111.Models.stan>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
 
 @{
-    ViewBag.Title = "AGENCIJE";
+
+
+    ViewBag.Title = "STANOVI";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>AGENCIJE</h2>
+<h2>STANOVI</h2>
 
 <p>
-    @Html.ActionLink("Dodaj novu agenciju", "Create")
-</p> 
+    @Html.ActionLink("Dodaj novi stan", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ime_agencije)
+            @Html.DisplayNameFor(model => model.broj_stana)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.kontakt_telefon)
+            @Html.DisplayNameFor(model => model.vlasnik_stana)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.e_mail)
+            @Html.DisplayNameFor(model => model.kupatilo)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.web_sajt)
+            @Html.DisplayNameFor(model => model.kvadratura)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.adresa)
+            @Html.DisplayNameFor(model => model.broj_soba)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.balkon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.agencija.ime_agencije)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zgrada.adresa)
         </th>
         <th></th>
     </tr>
@@ -34,49 +50,61 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ime_agencije)
+                @Html.DisplayFor(modelItem => item.broj_stana)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.kontakt_telefon)
+                @Html.DisplayFor(modelItem => item.vlasnik_stana)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.e_mail)
+                @Html.DisplayFor(modelItem => item.kupatilo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.web_sajt)
+                @Html.DisplayFor(modelItem => item.kvadratura)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.adresa)
+                @Html.DisplayFor(modelItem => item.broj_soba)
             </td>
             <td>
-                @Html.ActionLink("Uredi", "Edit", new { id = item.ID_agencija }) |
-                @Html.ActionLink("Detalji", "Details", new { id = item.ID_agencija }) |
-                @Html.ActionLink("Obrisi", "Delete", new { id = item.ID_agencija })
+                @Html.DisplayFor(modelItem => item.balkon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.agencija.ime_agencije)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zgrada.adresa)
+            </td>
+            <td>
+                @Html.ActionLink("Uredi", "Edit", new { id = item.ID_stan }) |
+                @Html.ActionLink("Detalji", "Details", new { id = item.ID_stan }) |
+                @Html.ActionLink("Obrisi", "Delete", new { id = item.ID_stan })
             </td>
         </tr>
     }
 
 </table>
 
-
-
-
 <script type="text/javascript">
 
 
 
 
-    $('document').ready(function () {
+            $('document').ready(function () {
 
 
-        $('tr:even').css('background-color', '#d5e1df');
+                $('tr:even').css('background-color', '#d5e1df');
 
-    });
+            });
 </script>
 
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
 
 <style>
 
 
     @@import url('../../Content/Site.css');
 </style>
+
+
+
