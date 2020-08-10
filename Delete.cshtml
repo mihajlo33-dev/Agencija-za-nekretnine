@@ -1,0 +1,65 @@
+﻿@model WebApplication111.Models.agencija
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Da li zelite da ovo izbrisete?</h3>
+<div>
+    <h4>Agencija</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ime_agencije)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ime_agencije)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kontakt_telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kontakt_telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.e_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.e_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.web_sajt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.web_sajt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Obrisi" class="btn btn-default" /> |
+            @Html.ActionLink("Nazad", "Index")
+        </div>
+    }
+</div>

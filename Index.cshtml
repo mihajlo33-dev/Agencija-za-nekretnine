@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebApplication111.Models.agencija>
+
+@{
+    ViewBag.Title = "AGENCIJE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AGENCIJE</h2>
+
+<p>
+    @Html.ActionLink("Dodaj novu agenciju", "Create")
+</p> 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ime_agencije)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kontakt_telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.e_mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.web_sajt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresa)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ime_agencije)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kontakt_telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.e_mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.web_sajt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adresa)
+            </td>
+            <td>
+                @Html.ActionLink("Uredi", "Edit", new { id = item.ID_agencija }) |
+                @Html.ActionLink("Detalji", "Details", new { id = item.ID_agencija }) |
+                @Html.ActionLink("Obrisi", "Delete", new { id = item.ID_agencija })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+    $('document').ready(function () {
+
+
+        $('tr:even').css('background-color', '#d5e1df');
+
+    });
+</script>
+
+
+<style>
+
+
+    @@import url('../../Content/Site.css');
+</style>
